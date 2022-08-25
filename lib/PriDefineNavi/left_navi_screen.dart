@@ -27,10 +27,18 @@ class _NaviPageState extends State<NaviPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue[350],
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back_ios,
+          ),
+        ),
         title: Text("Rapid Tech"),
       ),
       body: container,
-      drawer: Drawer(
+      endDrawer: Drawer(
         backgroundColor: Colors.white,
         child: SingleChildScrollView(
           child: Container(
